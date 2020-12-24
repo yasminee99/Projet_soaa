@@ -1,0 +1,47 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container mt-5">
+  
+    <div class="row mt-5">
+      <div class="col-3">
+        <button type="button" class="btn btn-secondary my-4"[routerLink]="['/add-candidat']">Ajouter</button>
+      </div>
+      <hr class="my-3">
+      <table class="table table-striped mt-3">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Date de naissance</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Facebook</th>
+            <th scope="col">Linkedin</th>
+            <th scope="col">Twitter</th>
+            <th scope="col">Score</th>
+            <th scope="col">Opérations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of Candidat">
+            <!--ngfor au niveau de tr-->
+            <th scope="row">{{c.id}}</th>
+            <td>{{c.nom}}</td>
+            <td>{{c.prenom}}</td>
+            <td>{{c.date_naiss |date}}</td>
+            <td>{{c.mail}}</td>
+            <td>{{c.fb}}</td>
+            <td>{{c.linkedin}}</td>
+            <td>{{c.twitter}}</td>
+            <td>{{c.score}}</td>
+            <td>
+              <button type="button" class="btn btn-info mb-3"  (click)=" deleteCandidat(c.id,c)">Supprimmer</button>
+              <button type="button" class="btn btn-info mx-2"[routerLink]="['/update-candidat',c.id]">Modifier</button>
+             
+            </td> 
+          </tr> 
+        </tbody>
+      </table>
+    </div> 
+    
+  </div>

@@ -1,0 +1,42 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container mt-5">
+  
+    <div class="row mt-5">
+      <div class="col-3">
+        <button type="button" class="btn btn-secondary my-4"[routerLink]="['/add-activite']">Ajouter</button>
+      </div>
+      <hr class="my-3">
+      <table class="table table-striped mt-3">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Lieu</th>
+            <th scope="col">Duree</th>
+            <th scope="col">Type</th>
+           
+            <th scope="col">Opérations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of Activite">
+            <!--ngfor au niveau de tr-->
+            <th scope="row">{{a.id}}</th>
+            <td>{{a.date |date}}</td>
+            <td>{{a.lieu}}</td>
+
+            <td>{{a.duree}}</td>
+            <td>{{a.type}}</td>
+           
+            <td>
+              <button type="button" class="btn btn-info mb-3"  (click)=" deleteActivite(a.id,a)">Supprimer</button>
+              <button type="button" class="btn btn-info mx-2"[routerLink]="['/update-activite',a.id]">Modifier</button>
+             
+            </td> 
+          </tr> 
+        </tbody>
+      </table>
+    </div> 
+    
+  </div>

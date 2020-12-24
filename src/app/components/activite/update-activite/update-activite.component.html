@@ -1,0 +1,33 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4 mt-3">
+            
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Date:</label>
+                <input type="text" class="form-control" required [(ngModel)]="a.date" name="date" [formControl]="date">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Duree:</label>
+                <input type="text" class="form-control" required [(ngModel)]="a.duree" name="duree" [formControl]="duree">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Type</label>
+                <input type="text" class="form-control" required [(ngModel)]="a.type" name="type" [formControl]="type">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Lieu:</label>
+                <input type="text" class="form-control" required [(ngModel)]="a.lieu" name="lieu" [formControl]="lieu">
+              </div>
+              
+              
+              
+              
+              <button type="button" class="btn btn-success " (click)="submit()">Submit</button>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+  
+ 

@@ -1,0 +1,45 @@
+<app-nav-bar></app-nav-bar>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4 mt-3">
+            
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nom:</label>
+                <input type="text" class="form-control" required [(ngModel)]="c.nom" name="nom" >
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Prénom:</label>
+                <input type="text" class="form-control" required [(ngModel)]="c.prenom" name="prenom" >
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Date de naissance</label>
+                <input type="text" class="form-control" required [(ngModel)]="c.date_naiss" name="date"  >
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                <input type="text" class="form-control" required [(ngModel)]="c.mail" name="mail">
+              </div>
+              <div class="mb-3"> 
+                <label for="exampleFormControlInput1" class="form-label">Lien Facebook:</label>
+                <input type="text" class="form-control" required [(ngModel)]="c.fb" name="fb">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Lien LinkedIn:</label>
+                <input type="text" class="form-control" required [(ngModel)]="c.linkedin" name="lk">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Lien Twitter:</label>
+                <input type="text" class="form-control" required [(ngModel)]="c.twitter" name="tw">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Score: </label>
+                <input type="text" class="form-control" required [(ngModel)]="c.score" name="score">
+              </div>
+              <button type="button" class="btn btn-success " (click)="submit()">Submit</button>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+  
+ 
